@@ -6,6 +6,30 @@
 // Bonus
 // Far comparire gli indirizzi email solamente quando sono stati tutti generati.
 
+const {createApp} = Vue
+
+createApp({
+    data(){
+        return{
+            emails: []
+
+        }
+    },
+    methods:{
+        
+    },
+    mounted(){
+        for(let i = 0; i < 15; i++){
+            axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((risultato) => {
+                
+                // console.log('risultato.data.response');
+                // console.log(risultato.data.response);
+                (this.emails).push(risultato.data.response);
+            });
+        }
+
+    }
+}).mount('#app')
 
 
 
@@ -29,6 +53,9 @@
 //     },
 //     methods:{
         
+//     },
+//     mounted(){
+
 //     }
 // }).mount('#app')
 
