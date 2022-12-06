@@ -11,6 +11,7 @@ const {createApp} = Vue
 createApp({
     data(){
         return{
+            numeroIndirizzi: 10,
             emails: []
 
         }
@@ -19,11 +20,10 @@ createApp({
         
     },
     mounted(){
-        for(let i = 0; i < 15; i++){
+
+        for(let i = 0; i < this.numeroIndirizzi; i++){
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((risultato) => {
                 
-                // console.log('risultato.data.response');
-                // console.log(risultato.data.response);
                 (this.emails).push(risultato.data.response);
             });
         }

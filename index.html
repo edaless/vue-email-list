@@ -28,9 +28,13 @@
 <body>
     
     <div id="app">
-        <div  v-for="email in emails">
-            {{ email}}
-        </div>
+        <!-- il v-if è per il bonus -->
+        <ul v-if="emails.length >= numeroIndirizzi">
+            <li  v-for="(email, index) in emails">
+                {{ index + 1 }} : {{ email }}
+            </li>
+        </ul>
+        <div v-else>Giuro che il caricamento è in corso...</div>
     </div>
 
 
