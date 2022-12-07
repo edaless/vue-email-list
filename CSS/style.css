@@ -19,6 +19,10 @@ font-family: 'Roboto', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
 
-
-
+#app{
+    padding: 0 10px;
+}
+li{
+    list-style: none;
+}
 
