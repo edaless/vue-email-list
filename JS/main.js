@@ -11,7 +11,7 @@ const {createApp} = Vue
 createApp({
     data(){
         return{
-            numeroIndirizzi: 10,
+            numeroIndirizzi: 1000,
             emails: []
 
         }
